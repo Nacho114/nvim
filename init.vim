@@ -11,9 +11,8 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'itchyny/lightline.vim'
 
 " Fancy UI
-Plug 'rcarriga/nvim-notify'
+Plug 'MunifTanjim/nui.nvim' " Used for noice
 Plug 'folke/noice.nvim'
-Plug 'MunifTanjim/nui.nvim'
 Plug 'junegunn/goyo.vim'
 
 " Core

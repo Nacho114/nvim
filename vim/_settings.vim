@@ -2,8 +2,6 @@
 " filetype plugin on
 " filetype indent on
 " syntax enable
-
-" Plugin settings
 let g:rustfmt_autosave = 1
 
 " What is this for?

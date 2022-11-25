@@ -3,7 +3,7 @@ vmap ff <cmd>Pounce<CR>
 
 let mapleader=" "
 
-nnoremap <leader>s :silent !write<cr>
+nnoremap <silent> <leader>s :write<cr>
 nnoremap <leader>w <c-w>
 nnoremap <Leader>bd <cmd>bd<CR>
 inoremap jk <Esc>

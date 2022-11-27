@@ -14,6 +14,4 @@ require'nvim-treesitter.configs'.setup {
 }
 
 
-require "_mappings"
-
 require("_ui").splash_screen()

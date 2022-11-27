@@ -22,6 +22,10 @@ set autoindent
 set smartindent
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2 
 
+" Permanent undo
+set undodir=~/.vimdid
+set undofile
+
 function! s:goyo_enter()
   set wrap
 endfunction

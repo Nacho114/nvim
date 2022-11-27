@@ -1,7 +1,5 @@
 set nocompatible
-filetype off
-
-autocmd! BufWritePost $MYVIMRC source $MYVIMRC | echom "Reloaded $NVIMRC"
+" filetype off
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -29,7 +27,6 @@ Plug 'rust-lang/rust.vim'
 " Utility
 Plug 'rlane/pounce.nvim'
 Plug 'toppair/reach.nvim'
-Plug 'ThePrimeagen/harpoon'
 
 call plug#end()
 

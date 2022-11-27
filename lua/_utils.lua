@@ -49,6 +49,7 @@ local telescope_theme = {
 
 M.reach.buffers = function() require('reach').buffers(buffer_options) end
 M.reach.marks = function() require('reach').marks(mark_options) end
+
 M.telescope.live_grep = function() require('telescope.builtin').live_grep() end
 M.telescope.find_files = function() require("telescope.builtin").find_files(telescope_theme) end
 

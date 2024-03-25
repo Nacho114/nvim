@@ -35,3 +35,8 @@ vim.opt.incsearch = true
 vim.opt.guicursor = "n:block,i:ver25"
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = "80"
+
+-- Spelling
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
+vim.opt.spelloptions = "camel"

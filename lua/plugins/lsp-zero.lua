@@ -67,10 +67,11 @@ return {
             lsp_zero.on_attach(function(client, bufnr)
                 -- see :help lsp-zero-keybindings
                 -- to learn the available actions
-                lsp_zero.default_keymaps({ buffer = bufnr, exclude = { '<F4>' }, })
+                lsp_zero.default_keymaps({ buffer = bufnr, exclude = { '<F4>', '<F2>' }, })
 
                 -- custom keybindings
-                vim.keymap.set('n', '<leader>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr },
+                -- vim.keymap.set('n', '<leader>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr }, { desc = "Show code actions" })
+                vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr },
                     { desc = "Show code actions" })
 
                 -- If you have multiple servers active in one file it'll try to format using all of them, and I can't guarantee the order.
@@ -86,7 +87,7 @@ return {
 
             require('mason-lspconfig').setup({
                 -- run :help lspconfig-all to see the list of all lsp servers
-                ensure_installed = { 'tsserver', 'rust_analyzer', 'pyright', 'svelte', 'yamlls', 'jsonls', 'html', 'cssls', 'lua_ls' },
+                ensure_installed = { 'tsserver', 'rust_analyzer', 'pyright', 'svelte', 'yamlls', 'jsonls', 'html', 'cssls', 'lua_ls', 'marksman' },
                 handlers = {
                     lsp_zero.default_setup,
                     lua_ls = function()

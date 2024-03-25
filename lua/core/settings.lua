@@ -35,4 +35,3 @@ vim.opt.incsearch = true
 vim.opt.guicursor = "n:block,i:ver25"
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = "80"
-

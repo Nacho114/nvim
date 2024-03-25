@@ -3,8 +3,17 @@ return {
     -- Optional dependencies
     -- dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
-    config = function() 
-        require("oil").setup()
+    config = function()
+        require("oil").setup({
+            columns = {
+                -- "icon",
+                -- "permissions",
+                -- "size",
+                -- "mtime",
+            },
+            skip_confirm_for_simple_edits = false,
+            delete_to_trash = true,
+        })
         local oil_status, oil = pcall(require, "oil")
         if oil_status then
             -- Custom function to automatically toggle Oil

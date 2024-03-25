@@ -40,6 +40,9 @@ return {
                     ['<C-d>'] = cmp.mapping.scroll_docs(4),
                     ['<C-f>'] = cmp_action.luasnip_jump_forward(),
                     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+                    ['<CR>'] = cmp.mapping.confirm({ select = false }),
+                    ['<Tab>'] = cmp_action.luasnip_supertab(),
+                    ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
                 })
             })
         end
@@ -64,7 +67,12 @@ return {
             lsp_zero.on_attach(function(client, bufnr)
                 -- see :help lsp-zero-keybindings
                 -- to learn the available actions
-                lsp_zero.default_keymaps({ buffer = bufnr })
+                lsp_zero.default_keymaps({ buffer = bufnr, exclude = { '<F4>' }, })
+
+                -- custom keybindings
+                vim.keymap.set('n', '<leader>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr },
+                    { desc = "Show code actions" })
+
                 -- If you have multiple servers active in one file it'll try to format using all of them, and I can't guarantee the order.
                 lsp_zero.buffer_autoformat()
             end)

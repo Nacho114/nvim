@@ -70,9 +70,10 @@ return {
                 lsp_zero.default_keymaps({ buffer = bufnr, exclude = { '<F4>', '<F2>' }, })
 
                 -- custom keybindings
-                -- vim.keymap.set('n', '<leader>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr }, { desc = "Show code actions" })
+                vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr },
+                    { desc = "[C]ode [A]ctions" })
                 vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr },
-                    { desc = "Show code actions" })
+                    { desc = "[R]e[n]me" })
 
                 -- If you have multiple servers active in one file it'll try to format using all of them, and I can't guarantee the order.
                 lsp_zero.buffer_autoformat()
